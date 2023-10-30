@@ -44,14 +44,14 @@ fun Array<Point>.totalDistance(): Float {
 fun Canvas.myDrawTextOnPath(text: String, path: Array<Point>, paint: Paint) {
     val step = path.totalDistance() / text.length
     for (textIndex in text.indices) {
-        val currentDistance = textIndex * step
+        val indexDistance = textIndex * step
         var segmentDistance = 0.0f
         for (pathIndex in 0 until path.size - 1) {
             val segment =  path[pathIndex + 1] - path[pathIndex]
             val hypotenuse = hypot(segment.x, segment.y)
-            if (segmentDistance + hypotenuse >= currentDistance) {
+            if (segmentDistance + hypotenuse > indexDistance) {
                 val angle = Math.toDegrees(atan2(segment.y.toDouble(), segment.x.toDouble()))
-                val position = path[pathIndex] + (segment * ((currentDistance - segmentDistance) / hypotenuse))
+                val position = path[pathIndex] + (segment * ((indexDistance - segmentDistance) / hypotenuse))
                 withRotation(angle.toFloat(), position.x, position.y) {drawText(text[textIndex].toString(), position.x, position.y, paint) }
                 break
             }

@@ -275,15 +275,13 @@ class TextBrush(private val context: AppCompatActivity, private val binding: Act
     private fun onPaintEditingBitmap(addCursor: Boolean = false) {
         if(paintingBitmap != null) {
             paintingBitmap = bitmapStack.last().copy(bitmapStack.last().config, true)
-            if (!typing || cursorThread?.isAlive == true) {
-                val pathCanvas = Canvas(paintingBitmap!!)
-                pathCanvas.myDrawPath(path.toTypedArray(), Paint().apply {
-                    style = Paint.Style.FILL
-                    color = myColor
-                    strokeWidth = 5f
-                })
-                binding.imageView.setImageBitmap(paintingBitmap)
-            }
+            val pathCanvas = Canvas(paintingBitmap!!)
+            pathCanvas.myDrawPath(path.toTypedArray(), Paint().apply {
+                style = Paint.Style.FILL
+                color = myColor
+                strokeWidth = 5f
+            })
+            binding.imageView.setImageBitmap(paintingBitmap)
             if (typingBitmap != null) {
                 typingBitmap = paintingBitmap?.copy(paintingBitmap?.config!!, true)
                 val typingCanvas = Canvas(typingBitmap!!)
