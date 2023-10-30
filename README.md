@@ -14,7 +14,7 @@
 
 *Important Notes*
 - The loaded image needs to be smaller then the screen so the pixels can match, pending enhancement to apply there
-- The icons tint changes dynamically depending on the average color of the loaded picture
+- The icons tint changes dynamically depending on the opposite average color of the loaded picture
 - When editing you can draw a line in the image, it will show the keyboard for you to write your message
 - You can click anywhere to close the keyboard or the confirm button inside the same keyboard
 - You can click again in the image to show the keyboard again and edit the text
