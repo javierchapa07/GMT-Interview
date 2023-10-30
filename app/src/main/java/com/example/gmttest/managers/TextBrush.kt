@@ -6,6 +6,7 @@ import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
 import android.view.MotionEvent
+import android.view.View
 import android.widget.SeekBar
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
@@ -70,7 +71,7 @@ class TextBrush(private val context: AppCompatActivity, private val binding: Act
             .setTitle("Text Size")
             .setMessage("Choose the text size, current is ${mySize.toInt()}")
             .setView(input)
-            .setPositiveButton("OK") { _, _ -> onPaintEditingBitmap() }
+            .setPositiveButton("OK") { _, _ -> binding.textView.text = mySize.toInt().toString(); onPaintEditingBitmap() }
             .setNegativeButton("Cancel") { dialog, _ -> dialog.cancel() }
             .create()
 
@@ -94,6 +95,7 @@ class TextBrush(private val context: AppCompatActivity, private val binding: Act
         binding.buttonTopRight.setColorFilter(color)
         binding.buttonBottomLeft.setColorFilter(color)
         binding.buttonBottomRight.setColorFilter(color)
+        binding.textView.setTextColor(color)
     }
 
     fun onKeyboardHidden() {
@@ -122,6 +124,7 @@ class TextBrush(private val context: AppCompatActivity, private val binding: Act
         binding.buttonTopRight.setColorFilter(color)
         binding.buttonBottomLeft.setColorFilter(color)
         binding.buttonBottomRight.setColorFilter(color)
+        binding.textView.setTextColor(color)
 
         bitmapStack.add(bitmap)
         binding.imageView.setImageBitmap(bitmapStack.last())
@@ -140,12 +143,15 @@ class TextBrush(private val context: AppCompatActivity, private val binding: Act
             binding.buttonBottomRight.setImageResource(android.R.drawable.ic_menu_upload)
             binding.buttonBottomLeft.setImageResource(android.R.drawable.ic_menu_view)
             binding.buttonBottomLeft.setBackgroundColor(myColor)
+            binding.textView.visibility = View.VISIBLE
+            binding.textView.text = mySize.toInt().toString()
         } else {
             binding.buttonTopLeft.setImageResource(android.R.drawable.ic_menu_revert)
             binding.buttonTopRight.setImageResource(android.R.drawable.ic_menu_edit)
             binding.buttonBottomRight.setImageResource(android.R.drawable.ic_menu_save)
             binding.buttonBottomLeft.setImageResource(android.R.drawable.ic_menu_gallery)
             binding.buttonBottomLeft.setBackgroundColor(Color.TRANSPARENT)
+            binding.textView.visibility = View.INVISIBLE
         }
     }
 

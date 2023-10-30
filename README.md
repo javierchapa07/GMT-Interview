@@ -10,10 +10,10 @@
 - Top Left / Cancel button, it cancels the edition and removes any unconfirmed changes, you need to click edit button again
 - Top Right / Send button, it confirms the changes and writes the text into the image, you can delete them with the undo button
 - Bottom Left / Eye button, it opens a modal that lets you change the color of the text, you can see your current color as the icon background
-- Bottom Right / Upload button, it lets you change the size of the text with a seekbar, you can see the current size inside the modal
+- Bottom Right / Upload button, it lets you change the size of the text with a seekbar, you can see the current size over it
 
 *Important Notes*
-- The loaded image needsto be smaller then the screen so the pixels can match, pending enhancement to apply there
+- The loaded image needs to be smaller then the screen so the pixels can match, pending enhancement to apply there
 - The icons tint changes dynamically depending on the average color of the loaded picture
 - When editing you can draw a line in the image, it will show the keyboard for you to write your message
 - You can click anywhere to close the keyboard or the confirm button inside the same keyboard
