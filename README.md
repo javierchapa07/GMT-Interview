@@ -16,6 +16,8 @@
 - The loaded image needs to be smaller then the screen so the pixels can match, pending enhancement to apply there
 - The icons tint changes dynamically depending on the opposite average color of the loaded picture
 - When editing you can draw a line in the image, it will show the keyboard for you to write your message
+- The line will be smoothed while you draw, that way we dont have sharp turns and it looks bad
 - You can click anywhere to close the keyboard or the confirm button inside the same keyboard
 - You can click again in the image to show the keyboard again and edit the text
 - While typing the text you will be able to see the line and the cursor will show where the next letters will be written
+- You will see line where you are typing while editing, once confirming the line will disappear
