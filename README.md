@@ -3,7 +3,8 @@
 *When in home screen you have 4 buttons in the corners*
 - Top Left / Undo button, it goes back to previous state, removing most recently added text or loaded image
 - Top Right / Edit button, this starts the brush process, it changes the buttons for editing purposes
-- Bottom Left / Load button, it lets you load an image from your gallery, **THE IMAGE NEEDS TO BE SMALLER THEN THE SCREEN SO THE PIXELS CAN MATCH, PENDING ENHANCEMENT**
+- Bottom Left / Load button, it lets you load an image from your gallery
+  **THE IMAGE NEEDS TO BE SMALLER THEN THE SCREEN SO THE PIXELS CAN MATCH, PENDING ENHANCEMENT**
 - Bottom Right / Save button, it saves the current image to your gallery with the changes made
 
 *When in edit state, you have 4 different buttons in the corners too*
