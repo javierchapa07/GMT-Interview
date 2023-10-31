@@ -21,3 +21,5 @@
 - You can click again in the image to show the keyboard again and edit the text
 - While typing the text you will be able to see the line and the cursor will show where the next letters will be written
 - You will see line where you are typing while editing, once confirming the line will disappear
+
+**The app is not optimized due to lack of time, I strongly recommend to install the release .apk published here instead of running it on an emulator**
